@@ -1,6 +1,7 @@
 import React from 'react';
 import { FieldProps, FieldValidation } from '@rjsf/core';
 import FormControl from '@material-ui/core/FormControl';
+import { InputLabel, Input, FormHelperText } from '@material-ui/core';
 /*
  This is the actual component that will get rendered in the form
 */
