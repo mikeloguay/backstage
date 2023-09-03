@@ -1,7 +1,17 @@
 import React from 'react';
-import { FieldProps, FieldValidation } from '@rjsf/core';
+import { FieldValidation } from '@rjsf/core';
 import FormControl from '@material-ui/core/FormControl';
 import { InputLabel, Input, FormHelperText } from '@material-ui/core';
+import { z } from 'zod';
+import { makeFieldSchemaFromZod } from '@backstage/plugin-scaffolder';
+
+const ValidateKebabCaseFieldSchema = makeFieldSchemaFromZod(
+    z.string(),
+  );
+  
+export const ValidateKebabCaseSchema = ValidateKebabCaseFieldSchema.schema;
+type ValidateKebabCaseSchemaProps = typeof ValidateKebabCaseFieldSchema.type;
+
 /*
  This is the actual component that will get rendered in the form
 */
@@ -10,7 +20,7 @@ export const ValidateKebabCase = ({
   rawErrors,
   required,
   formData,
-}: FieldProps<string>) => {
+}: ValidateKebabCaseSchemaProps) => {
   return (
     <FormControl
       margin="normal"

@@ -9,13 +9,15 @@ import { scaffolderPlugin } from '@backstage/plugin-scaffolder';
 import { createScaffolderFieldExtension } from '@backstage/plugin-scaffolder-react';
 import {
   ValidateKebabCase,
+  ValidateKebabCaseSchema,
   validateKebabCaseValidation,
-} from './ValidateKebabCase/ValidateKebabCaseExtension';
+} from './ValidateKebabCaseExtension';
 
 export const ValidateKebabCaseFieldExtension = scaffolderPlugin.provide(
   createScaffolderFieldExtension({
     name: 'ValidateKebabCase',
     component: ValidateKebabCase,
     validation: validateKebabCaseValidation,
+    schema: ValidateKebabCaseSchema,
   }),
 );
