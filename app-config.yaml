@@ -85,6 +85,12 @@ catalog:
       target: ../../examples/template/template.yaml
       rules:
         - allow: [Template]
+    
+    # Mikelus template
+    - type: file
+      target: ../../examples/mikelus-template/mikelus-template.yaml
+      rules:
+        - allow: [Template]
 
     # Local example organizational data
     - type: file

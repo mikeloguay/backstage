@@ -1,0 +1,71 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
+kind: Template
+metadata:
+  name: example-mikelus-template
+  title: Example Mikelus Template
+  description: An example template to test UI components
+spec:
+  owner: user:guest
+  type: service
+
+  parameters:
+    - title: A multiple choices list (plain)
+      properties:
+        environments:
+          title: Select environments
+          type: array
+          items:
+            type: string
+            enum:
+              - production
+              - staging
+              - development
+          uniqueItems: true
+          ui:widget: checkboxes
+    - title: Array with another types
+      properties:
+        arrayObjects:
+          title: Array with custom objects
+          type: array
+          ui:options:
+            addable: false
+            orderable: false
+            removable: false
+          items:
+            type: object
+            properties:
+              array:
+                title: Array string with default value
+                type: string
+                default: value3
+                enum:
+                  - value1
+                  - value2
+                  - value3
+              flag:
+                title: Boolean flag
+                type: boolean
+                ui:widget: radio
+              someInput:
+                title: Simple text input
+                type: string
+    - title: Boolean Yes or No options
+      properties:
+        isYes:
+          title: Yes or No options
+          type: boolean
+          ui:widget: radio
+    # - title: Boolean multiple options
+    #   properties:
+    #     features:
+    #       title: Select features
+    #       type: array
+    #       items:
+    #         type: boolean
+    #         enum:
+    #           - 'Enable scraping'
+    #           - 'Enable HPA'
+    #           - 'Enable cache'
+    #       uniqueItems: true
+    #       ui:widget: checkboxes

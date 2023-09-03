@@ -1,0 +1,17 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: Test template
+  title: Test template with custom extension
+  description: Test template
+spec:
+  parameters:
+    - title: Fill in some steps
+      required:
+        - name
+      properties:
+        name:
+          title: Name
+          type: string
+          description: My custom name for the component
+          ui:field: ValidateKebabCase
