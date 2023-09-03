@@ -6091,6 +6091,17 @@
     prop-types "^15.7.2"
     react-is "^16.9.0"
 
+"@rjsf/core@^5.12.1":
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/@rjsf/core/-/core-5.12.1.tgz#ab879ffa9fa1dbd8d2cde77aba0bd43155563b1a"
+  integrity sha512-1YFhZ90/uHRx1akQmDdIjBxGMjs/5gtuTLUFwl6GbOwTm2fhZRh3qXRFyTXz81Oy6TGcbrxBJEYvFg2iHjYKCA==
+  dependencies:
+    lodash "^4.17.21"
+    lodash-es "^4.17.21"
+    markdown-to-jsx "^7.3.2"
+    nanoid "^3.3.6"
+    prop-types "^15.8.1"
+
 "@rjsf/material-ui-v5@npm:@rjsf/material-ui@5.7.3":
   version "5.7.3"
   resolved "https://registry.yarnpkg.com/@rjsf/material-ui/-/material-ui-5.7.3.tgz#2f8c35d83f7d53c748804031c7f78c299ce98f00"
@@ -8597,6 +8608,7 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     "@backstage/plugin-org" "^0.6.11"
     "@backstage/plugin-permission-react" "^0.4.14"
     "@backstage/plugin-scaffolder" "^1.14.2"
+    "@backstage/plugin-scaffolder-react" "^1.5.4"
     "@backstage/plugin-search" "^1.3.4"
     "@backstage/plugin-search-react" "^1.6.4"
     "@backstage/plugin-tech-radar" "^0.6.7"
@@ -8607,6 +8619,7 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     "@backstage/theme" "^0.4.1"
     "@material-ui/core" "^4.12.2"
     "@material-ui/icons" "^4.9.1"
+    "@rjsf/core" "^5.12.1"
     history "^5.0.0"
     react "^17.0.2"
     react-dom "^17.0.2"
@@ -16069,7 +16082,7 @@ markdown-table@^3.0.0:
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-3.0.3.tgz#e6331d30e493127e031dd385488b5bd326e4a6bd"
   integrity sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==
 
-markdown-to-jsx@^7.2.0:
+markdown-to-jsx@^7.2.0, markdown-to-jsx@^7.3.2:
   version "7.3.2"
   resolved "https://registry.yarnpkg.com/markdown-to-jsx/-/markdown-to-jsx-7.3.2.tgz#f286b4d112dad3028acc1e77dfe1f653b347e131"
   integrity sha512-B+28F5ucp83aQm+OxNrPkS8z0tMKaeHiy0lHJs3LqCyDQFtWuenaIrkaVTgAm1pf1AU85LXltva86hlaT17i8Q==
